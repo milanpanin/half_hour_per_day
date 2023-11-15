@@ -11,19 +11,29 @@
   <main>
     <h1>Finance Logger</h1>
 
-    <section></section>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>To/From</th>
+          <th>Details</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody id="finance_table_body"></tbody>
+    </table>
 
     <footer>
       <form>
         <select id="finance_type" name="">
-          <option value="1">1</option>
-          <option value="2">2</option>
+          <option value="1">Dobit</option>
+          <option value="2">Potrošnja</option>
         </select>
-        <input id="finance_to_from" type="text" placeholder="To/From">
-        <input id="finance_details" type="text" placeholder="Details">
-        <input id="finance_amount" type="number" placeholder="Amount">
+        <input id="finance_to_from" type="text" placeholder="Od koga">
+        <input id="finance_details" type="text" placeholder="Detalji">
+        <input id="finance_amount" type="number" placeholder="Količina">
 
-        <button id="finance_submit">Submit</button>
+        <button id="finance_submit">Dodaj</button>
       </form>
     </footer>
   </main>

@@ -63,3 +63,25 @@ form button {
   font-weight: 600;
   cursor: pointer;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+}
+
+table thead tr th {
+  padding: 0.5rem;
+  text-align: left;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+table tbody tr td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}

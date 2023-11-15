@@ -28,6 +28,17 @@ Docs - [Official TypeScript Docs](https://www.typescriptlang.org/docs/handbook/t
 
 ### Project setup
 
-npm install -g typescript -- TypeScript globally installation. <br />
-tsc --init -- Initialization of the tsconfig.json file. <br />
-tsc fileName.ts -w -- Compile the specified TypeScript file with watch mode. <br />
+TypeScript globall installation:
+```sh
+npm install -g typescript
+```
+
+Initialization of the tsconfig.json file:
+```sh
+tsc --init
+```
+
+Compile the specified TypeScript file with watch mode:
+```sh
+tsc fileName.ts -w
+```

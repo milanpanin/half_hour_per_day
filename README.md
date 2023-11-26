@@ -15,8 +15,8 @@ graph LR;
 | Date | Worked on... | Time spent |
 | :---: | --- | :---: |
 | 02.11.2023. 03.11.2023. | Setting up the repository and creating a work plan for the following period.  | 1h |
-| 06.11.2023. 10.11.2023. | Project setup, compiling typescript, type aliases, objects and arrays from The Net Ninja coruse  | 2h |
-| 13.11.2023. 17.11.2023. | | 1h |
+| 06.11.2023. 10.11.2023. | Project setup, compiling typescript, type aliases, objects and arrays from the Net Ninja course.  | 2h |
+| 13.11.2023. 17.11.2023. | Interfaces with classes from the Net Ninja course.  | 1h |
 | 20.11.2023. 24.11.2023. | | |
 | 27.11.2023. 01.12.2023. | | |
 
@@ -28,7 +28,7 @@ Docs - [Official TypeScript Docs](https://www.typescriptlang.org/docs/handbook/t
 
 ### Project setup
 
-TypeScript globall installation:
+TypeScript global installation:
 ```sh
 npm install -g typescript
 ```

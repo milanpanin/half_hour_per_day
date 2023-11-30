@@ -5,29 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finance Logger</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script/index.js"></script>
+  <script defer src="./index.js" type="module"></script>
 </head>
 <body>
   <main>
     <h1>Finance Logger</h1>
 
+    <h2>Profit</h2>
     <table>
       <thead>
         <tr>
-          <th>Type</th>
           <th>To/From</th>
           <th>Details</th>
           <th>Amount</th>
         </tr>
       </thead>
-      <tbody id="finance_table_body"></tbody>
+      <tbody id="finance_profit_table_body"></tbody>
+    </table>
+
+    <h2>Spending</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>To/From</th>
+          <th>Details</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody id="finance_speding_table_body"></tbody>
     </table>
 
     <footer>
       <form>
         <select id="finance_type" name="">
-          <option value="1">Dobit</option>
-          <option value="2">Potrošnja</option>
+          <option value="profit">Dobit</option>
+          <option value="spending">Potrošnja</option>
         </select>
         <input id="finance_to_from" type="text" placeholder="Od koga">
         <input id="finance_details" type="text" placeholder="Detalji">

@@ -8,6 +8,6 @@ export class Spending implements HasFormatter {
   ) {};
 
   format() {
-    return`${this.client} is spend £${this.amount} for ${this.details}`;
+    return `${this.client} is spend £${this.amount} for ${this.details}`;
   }
 }

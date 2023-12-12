@@ -17,8 +17,10 @@ graph LR;
 | 02.11.2023. 03.11.2023. | Setting up the repository and creating a work plan for the following period.  | 1h |
 | 06.11.2023. 10.11.2023. | Project setup, compiling typescript, type aliases, objects and arrays from the Net Ninja course.  | 2h |
 | 13.11.2023. 17.11.2023. | Interfaces with classes from the Net Ninja course.  | 1h |
-| 20.11.2023. 24.11.2023. | | |
-| 27.11.2023. 01.12.2023. | | |
+| 20.11.2023. 24.11.2023. | DOM manipulation form Net Ninja course.  | 1.5h |
+| 27.11.2023. 01.12.2023. | Rendering an HTML template from the Net Ninja course.  | 1.5h |
+| 04.12.2023. 08.12.2023. | Creating a class which is used for rendering HTML.  | 2h |
+
 
 ### Content
 

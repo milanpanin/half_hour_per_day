@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "sass --no-source-map --watch src/styles/:public/styles/ --style compressed"
+  },
   "dependencies": {
     "sass": "^1.69.5"
   }

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "sass --no-source-map --watch src/styles/:public/styles/ --style compressed"
+    "start": "concurrently \"sass --no-source-map --watch src/styles/:public/styles/ --style compressed\" \"tsc --watch\""
   },
   "dependencies": {
     "sass": "^1.69.5"

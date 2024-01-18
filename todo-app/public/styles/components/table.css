@@ -1,1 +1,1 @@
-.todo-container__table{width:100%}.todo-container__table thead{background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.1)}.todo-container__table thead tr th{padding:20px 10px;text-align:left;font-size:14px;font-weight:600;color:#333}
+#todo-container__table{width:100%}#todo-container__table thead{background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.1)}#todo-container__table thead tr th{padding:10px 20px}#todo-container__table-body{margin-top:10px;text-align:center}#todo-container__table-body td{padding:10px 20px}

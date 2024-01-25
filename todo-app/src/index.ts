@@ -6,12 +6,11 @@ import { ProductInfo } from "./interfaces/productInfo";
  * @param productInfo - The information of the product to be displayed in the row.
  */
 const addRowToTable = (table: HTMLTableElement, productInfo: ProductInfo) => {
-  const rowID = Math.random();
   const row = `
-    <tr rowID=${rowID}>
-      <td>${productInfo.product}</td>
-      <td>${productInfo.count}</td>
-      <td><span class="todo-container__delete">Delete</span></td>
+    <tr>
+      <td class='product-name'>${productInfo.product}</td>
+      <td class='product-count'>${productInfo.count}</td>
+      <td><span class="todo-container__delete">💀</span> <span class="todo-container__edit">🤢</span></td>
     </tr>
   `;
 
@@ -21,23 +20,44 @@ const addRowToTable = (table: HTMLTableElement, productInfo: ProductInfo) => {
 document.getElementById('todo-container__submit')!.addEventListener('click', (event: MouseEvent) => {
   event.preventDefault();
 
-  // TODO: Validacija unetih podataka
   const product = document.getElementById('todo-container__product') as HTMLInputElement;
   const count = document.getElementById('todo-container__count') as HTMLInputElement;
   const table = document.getElementById('todo-container__table-body') as HTMLTableElement;
 
   addRowToTable(table, { product: product.value, count: parseInt(count.value) });
+  product.value = '';
+  count.value = '';
   addEventListener();
 });
+
+const updateTableRow = (productName: HTMLElement, productCount: HTMLElement) => {
+  const updateButton = document.getElementById('todo-container__update') as HTMLInputElement;
+  const submitButton = document.getElementById('todo-container__submit') as HTMLInputElement;
+  const product = document.getElementById('todo-container__product') as HTMLInputElement;
+  const count = document.getElementById('todo-container__count') as HTMLInputElement;
+
+  updateButton.addEventListener('click', (event: MouseEvent) => {
+    event.preventDefault();
+
+    productName.innerText = product.value;
+    productCount.innerText = count.value;
+    updateButton.style.display = 'none';
+    submitButton.style.display = 'block';
+    product.value = '';
+    count.value = '';
+  });
+};
 
 /**
  * Adds event listeners to delete buttons in the todo list.
  */
 const addEventListener = () => {
   const deleteButtons = document.querySelectorAll('.todo-container__delete');
+  const editButtons = document.querySelectorAll('.todo-container__edit');
   
   deleteButtons.forEach((element: Element) => {
     const button = element as HTMLElement;
+  
     button.addEventListener('click', (event: MouseEvent) => {
       event.preventDefault();
 
@@ -47,4 +67,27 @@ const addEventListener = () => {
       }
     });
   });
-}
+
+  editButtons.forEach((element: Element) => {
+    const button = element as HTMLElement;
+
+    button.addEventListener('click', (event: MouseEvent) => {
+      event.preventDefault();
+
+      const row = (event.target as HTMLElement).closest('tr');
+      let productName = row?.querySelector('.product-name') as HTMLElement;
+      let productCount = row?.querySelector('.product-count') as HTMLElement;
+      const productNameInput = document.getElementById('todo-container__product') as HTMLInputElement;
+      const productCountInput = document.getElementById('todo-container__count') as HTMLInputElement;
+      const updateButton = document.getElementById('todo-container__update') as HTMLInputElement;
+      const submitButton = document.getElementById('todo-container__submit') as HTMLInputElement;
+
+      productNameInput.value = productName.innerText;
+      productCountInput.value = productCount.innerText;
+      updateButton.style.display = 'block';
+      submitButton.style.display = 'none';
+
+      updateTableRow(productName, productCount);
+    }); 
+  });
+};

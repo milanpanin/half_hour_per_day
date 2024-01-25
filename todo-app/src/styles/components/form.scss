@@ -14,7 +14,8 @@
 
 #todo-container__product,
 #todo-container__count,
-#todo-container__submit {
+#todo-container__submit,
+#todo-container__update {
   padding: 0 15px;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -36,6 +37,18 @@
 }
 
 #todo-container__submit {
+  background-color: #121618;
+  color: #fff;
+  border: 0;
+  cursor: grabbing;
+  
+  &:hover {
+    background-color: #3f4143;
+  }
+}
+
+#todo-container__update {
+  display: none;
   background-color: #121618;
   color: #fff;
   border: 0;

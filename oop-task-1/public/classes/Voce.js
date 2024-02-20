@@ -1,6 +1,7 @@
 export class Voce {
-    constructor(naziv, tezina) {
+    constructor(naziv, tezina, zapremina) {
         this.naziv = naziv;
         this.tezina = tezina;
+        this.zapremina = zapremina;
     }
 }

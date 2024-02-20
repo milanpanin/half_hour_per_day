@@ -1,7 +1,7 @@
 import { Voce } from './Voce';
-class Jabuka extends Voce {
-    constructor(tezina, crvljivo) {
-        super('Jabuka', tezina);
+export class Jabuka extends Voce {
+    constructor(tezina, crvljivo, zapremina) {
+        super('Jabuka', tezina, zapremina);
         this.crvljivo = crvljivo;
     }
 }

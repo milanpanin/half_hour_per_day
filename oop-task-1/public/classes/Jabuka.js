@@ -1,4 +1,4 @@
-import { Voce } from './Voce';
+import { Voce } from './Voce.js';
 export class Jabuka extends Voce {
     constructor(tezina, crvljivo, zapremina) {
         super('Jabuka', tezina, zapremina);

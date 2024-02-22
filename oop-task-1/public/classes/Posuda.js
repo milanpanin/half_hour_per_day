@@ -5,6 +5,10 @@ export class Posuda {
         this.slobodanKapacitet = kapacitet;
     }
     dodajVoce(novoVoce) {
+        if (novoVoce.crvljivo) {
+            console.log('Ne mozemo dodati crvljivo voce!');
+            return;
+        }
         if (this.slobodanKapacitet < novoVoce.zapremina) {
             console.log('Nema mesta za voce!');
             return;
@@ -15,7 +19,7 @@ export class Posuda {
         console.log('Voce je dodato u posudu!');
     }
     brojDodatihVocki() {
-        console.log(this.borojVocki);
+        return this.borojVocki;
     }
     slobodnoMesta() {
         return this.slobodanKapacitet;

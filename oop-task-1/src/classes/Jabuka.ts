@@ -1,4 +1,4 @@
-import { Voce } from './Voce';
+import { Voce } from './Voce.js';
 
 export class Jabuka extends Voce {
   crvljivo: boolean;

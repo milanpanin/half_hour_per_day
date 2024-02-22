@@ -1,4 +1,5 @@
 import { Voce } from './Voce';
+import { Jabuka } from './Jabuka';
 
 export class Posuda {
   slobodanKapacitet: number;
@@ -10,7 +11,12 @@ export class Posuda {
     this.slobodanKapacitet = kapacitet;
   }
 
-  dodajVoce(novoVoce: Voce) {
+  dodajVoce(novoVoce: Jabuka) {
+    if (novoVoce.crvljivo) {
+      console.log('Ne mozemo dodati crvljivo voce!');
+      return;
+    }
+
     if (this.slobodanKapacitet < novoVoce.zapremina) {
       console.log('Nema mesta za voce!');
       return;
@@ -24,7 +30,7 @@ export class Posuda {
   }
 
   brojDodatihVocki() {
-    console.log(this.borojVocki);
+    return this.borojVocki;
   }
 
   slobodnoMesta() {

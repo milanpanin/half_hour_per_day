@@ -1,9 +1,33 @@
 import { Voce } from './Voce';
 
 export class Posuda {
-  constructor(kapacitet: number, voce: Voce) {}
+  slobodanKapacitet: number;
+  borojVocki: number = 0;
+  voce: Voce[];
 
-  dodajVoce(voce: Voce) {}
-  dodatoVoce() {}
-  slobodnoMesta() {}
+  constructor(kapacitet: number) {
+    this.voce = [];
+    this.slobodanKapacitet = kapacitet;
+  }
+
+  dodajVoce(novoVoce: Voce) {
+    if (this.slobodanKapacitet < novoVoce.zapremina) {
+      console.log('Nema mesta za voce!');
+      return;
+    }
+
+    this.slobodanKapacitet -= novoVoce.zapremina;
+    this.borojVocki++;
+    this.voce.push(novoVoce);
+
+    console.log('Voce je dodato u posudu!');
+  }
+
+  brojDodatihVocki() {
+    console.log(this.borojVocki);
+  }
+
+  slobodnoMesta() {
+    return this.slobodanKapacitet;
+  }
 }

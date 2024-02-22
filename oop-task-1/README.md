@@ -4,8 +4,7 @@ Zadatak:
 3. Sokovnik se sastoji iz dva dela: posude za voće i cediljke.
 4. Posuda za voće ima svoj kapacitet i može da sadrži voće. U posudu za voće mogu da
 dodam voćku, mogu da pratim koliko voćki ima unutra i koliko je prostora ostalo.
-5. Cediljka služi za ceđenje voća i radi tako što iscedi sve voće koje se nalazi u posudi. Pri
-svakom ceđenju mogu da pratim koliko soka je dobijeno.
+5. Cediljka služi za ceđenje voća i radi tako što iscedi sve voće koje se nalazi u posudi. Pri svakom ceđenju mogu da pratim koliko soka je dobijeno.
 6. Ceđenjem jedne voćke se dobija količina soka jednaka 40% težine voćke.
 7. Sokovnik se ne sme prepuniti, a takođe ne prihvata crvljive jabuke.
 8. Napisati program koji simulira rad sokovnika u koji može da stane 30kg jabuka.

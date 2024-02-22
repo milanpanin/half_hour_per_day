@@ -8,6 +8,12 @@ export class Cediljka {
   }
 
   cedi() {
+    const voce = this.posuda.voce;
+
+    voce.map(vocka => {
+      console.log(`Cedimo ${vocka.tezina}`);
+    });
+
     this.dobijenoSoka();
   }
 

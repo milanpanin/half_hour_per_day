@@ -1,10 +1,10 @@
 import { Voce } from './Voce';
 
-class Jabuka extends Voce {
+export class Jabuka extends Voce {
   crvljivo: boolean;
 
-  constructor(tezina: number, crvljivo: boolean) {
-    super('Jabuka', tezina);
+  constructor(tezina: number, crvljivo: boolean, zapremina: number) {
+    super('Jabuka', tezina, zapremina);
     this.crvljivo = crvljivo;
   }
 }

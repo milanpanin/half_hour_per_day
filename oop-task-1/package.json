@@ -7,5 +7,6 @@
     "start": "tsc --watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }

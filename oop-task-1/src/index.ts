@@ -3,18 +3,26 @@ import { Jabuka } from './classes/Jabuka.js';
 import { Cediljka } from './classes/Cediljka.js';
 import { Posuda } from './classes/Posuda.js';
 
-// TODO 
-// Metoda za generisanje jabuka
+const posuda = new Posuda(200);
 
-const jabuka1 = new Jabuka(120, false, 3);
-const jabuka2 = new Jabuka(100, true, 2);
-const posuda = new Posuda(10);
-posuda.dodajVoce(jabuka1);
-posuda.dodajVoce(jabuka2);
+const dodajJabukeUPosudu = (brojJabuka: number) => {
+  for (let i = 0; i < brojJabuka; i++) {
+    const jabuka = new Jabuka(Math.floor(Math.random() * 200) + 100, Math.random() > 0.5, Math.floor(Math.random() * 3) + 1);
+    posuda.dodajVoce(jabuka);
+  }
+}
+
+dodajJabukeUPosudu(100);
+
+console.log('\n---------------- INFO ----------------');
 console.log(`Broj dodatih voćki u posudi: ${posuda.brojDodatihVocki()}`);
 console.log(`Slobodni kapacitet posude: ${posuda.slobodnoMesta()}`);
+console.log('---------------- INFO ---------------- \n');
+
 const cediljka = new Cediljka(posuda);
-console.log('\n ----Ceđenje----');
+
+console.log('\n---------------- Ceđenje ----------------');
 cediljka.cedi();
-console.log('----Kraj ceđenja---- \n');
-console.log(`Dobijeno soka: ${cediljka.dobijenoSoka()} ml (od prilike).`);
+console.log('---------------- Ceđenje ---------------- \n');
+
+console.log(`Dobijeno soka: ${cediljka.dobijenoSoka().toFixed(2)} ml (od prilike).`);

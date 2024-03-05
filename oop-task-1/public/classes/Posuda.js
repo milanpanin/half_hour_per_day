@@ -18,6 +18,10 @@ export class Posuda {
             console.log('Premašili ste maksimalnu težinu cediljke(posude)!');
             return false;
         }
+        if (Math.random() > 0.3) {
+            console.log('Dodavanje vocke nije uspelo!');
+            return true;
+        }
         this.slobodanKapacitet -= novoVoce.zapremina;
         this.borojVocki++;
         this.dostupnaTezina -= novoVoce.tezina;

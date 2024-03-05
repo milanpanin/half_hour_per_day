@@ -8,16 +8,20 @@ export class Cediljka {
     this.posuda = posuda;
   }
 
-  cedi() {
+  cedi(): void {
     const voce = this.posuda.voce;
 
     voce.map((vocka, index) => {
-      console.log(`${index + 1}. Cedimo: ${vocka.tezina} grama jabuke.`);
-      this.sok += vocka.tezina * 0.4;
+      if(Math.random() > 0.7) {
+        console.log(`${index + 1}. Cedimo: ${vocka.tezina} grama jabuke.`);
+        this.sok += vocka.tezina * 0.4;
+      } else {
+        console.log('Ceđenje nije uspelo.');
+      }
     });
   }
 
-  dobijenoSoka() {
+  dobijenoSoka(): number {
     return this.sok;
   }
 }

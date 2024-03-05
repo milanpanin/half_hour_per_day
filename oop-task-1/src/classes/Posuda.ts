@@ -12,7 +12,7 @@ export class Posuda {
     this.slobodanKapacitet = kapacitet;
   }
 
-  dodajVoce(novoVoce: Jabuka) {
+  dodajVoce(novoVoce: Jabuka): boolean {
     if (novoVoce.crvljivo) {
       console.log('Ne mozemo dodati crvljivo voce!');
       return true;
@@ -26,7 +26,12 @@ export class Posuda {
     if (this.dostupnaTezina < novoVoce.tezina) {
       console.log('Premašili ste maksimalnu težinu cediljke(posude)!');
       return false;
-    } 
+    }
+    
+    if (Math.random() > 0.3) {
+      console.log('Dodavanje vocke nije uspelo!');
+      return true;
+    }
 
     this.slobodanKapacitet -= novoVoce.zapremina;
     this.borojVocki++;
@@ -38,15 +43,15 @@ export class Posuda {
     return true;
   }
 
-  brojDodatihVocki() {
+  brojDodatihVocki(): number {
     return this.borojVocki;
   }
 
-  slobodnoMesta() {
+  slobodnoMesta(): number {
     return this.slobodanKapacitet;
   }
 
-  dostupnaTezinaPosude() {
+  dostupnaTezinaPosude(): number {
     return this.dostupnaTezina;
   }
 }

@@ -1,7 +1,7 @@
-Broj dodatih voćki u posudi: 87.
-Slobodni kapacitet posude: 23.
-Dostupna tezina posude: 113 grama.
+Broj dodatih voćki u posudi: 84.
+Slobodni kapacitet posude: 22.
+Dostupna tezina posude: 274 grama.
 
 Startovanje ceđenja! 
 
-Dobijeno soka: 4031.20 ml (od prilike).
+Dobijeno soka: 2673.20 ml (od prilike).

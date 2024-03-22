@@ -1,5 +1,5 @@
-import { Voce } from './Voce';
-import { Jabuka } from './Jabuka';
+import { Voce } from './Voce.js';
+import { Jabuka } from './Jabuka.js';
 
 export class Posuda {
   dostupnaTezina: number = 30000;

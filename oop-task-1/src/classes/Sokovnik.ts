@@ -1,5 +1,5 @@
-import { Posuda } from './Posuda';
-import { Cediljka } from './Cediljka';
+import { Posuda } from './Posuda.js';
+import { Cediljka } from './Cediljka.js';
 
 class Sokovnik {
   posuda: Posuda;

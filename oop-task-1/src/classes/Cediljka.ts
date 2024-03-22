@@ -1,4 +1,4 @@
-import { Posuda } from "./Posuda";
+import { Posuda } from "./Posuda.js";
 
 export class Cediljka {
   posuda: Posuda;

@@ -1,24 +1,14 @@
-// interface tipPregleda {
-//   pritisak: string;
-//   secer: string;
-//   holesterol: string;
-// }
-
-enum tipPregleda {
-  pritisak = 'pritisak',
-  secer = 'secer',
-  holesterol = 'holesterol'
-}
+import { tipPregleda } from './enum.js';
 
 export class Doktor {
   ime: string;
   prezime: string;
-  specijalnost: string;
+  private _specijalnost: string;
 
   constructor (ime: string, prezime: string, specijalnost: string) {
     this.ime = ime;
     this.prezime = prezime;
-    this.specijalnost = specijalnost;
+    this._specijalnost = specijalnost;
   }
 
   pregledajPacijenta(tipPregleda: tipPregleda) {
@@ -47,7 +37,9 @@ export class Doktor {
   
   }
 
-  merenjePritiska() {}
+  merenjePritiska() {
+    console.log('Merenje pritiska');
+  }
   merenjeSecera() {}
   merenjeHolesterola() {}
 }

@@ -1,19 +1,8 @@
-// interface tipPregleda {
-//   pritisak: string;
-//   secer: string;
-//   holesterol: string;
-// }
-var tipPregleda;
-(function (tipPregleda) {
-    tipPregleda["pritisak"] = "pritisak";
-    tipPregleda["secer"] = "secer";
-    tipPregleda["holesterol"] = "holesterol";
-})(tipPregleda || (tipPregleda = {}));
 export class Doktor {
     constructor(ime, prezime, specijalnost) {
         this.ime = ime;
         this.prezime = prezime;
-        this.specijalnost = specijalnost;
+        this._specijalnost = specijalnost;
     }
     pregledajPacijenta(tipPregleda) {
         const date = new Date();
@@ -38,7 +27,9 @@ export class Doktor {
             this.merenjeHolesterola();
         }
     }
-    merenjePritiska() { }
+    merenjePritiska() {
+        console.log('Merenje pritiska');
+    }
     merenjeSecera() { }
     merenjeHolesterola() { }
 }

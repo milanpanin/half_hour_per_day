@@ -1,9 +1,7 @@
 import { Doktor } from './classes/Doktor.js';
-var tipPregleda;
-(function (tipPregleda) {
-    tipPregleda["pritisak"] = "pritisak";
-    tipPregleda["secer"] = "secer";
-    tipPregleda["holesterol"] = "holesterol";
-})(tipPregleda || (tipPregleda = {}));
+import { Pacijent } from './classes/Pacijent.js';
+import { tipPregleda } from './classes/enum.js';
 const doktor = new Doktor('Milan', 'Panin', 'kardiolog');
 doktor.pregledajPacijenta(tipPregleda.pritisak);
+const pacijent = new Pacijent('Milan', 'Milanovic', '123456789', '123456789');
+pacijent.izabraniDoktor(doktor);

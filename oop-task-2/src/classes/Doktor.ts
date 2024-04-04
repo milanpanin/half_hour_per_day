@@ -12,8 +12,8 @@ export class Doktor {
     this.specijalnost = specijalnost;
   }
 
-  zakazivanjePregleda(pacijent: Pacijent) {
-    pacijent.zakazanPregled = true;
+  zakazivanjePregleda(pacijent: Pacijent, tip: tipPregleda) {
+    pacijent.pregled[tip] = true;
     console.log(`Pregled je zakazan za pacijenta ${pacijent.ime} ${pacijent.prezime}`);
   }
 }

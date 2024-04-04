@@ -8,7 +8,7 @@ const pacijent = new Pacijent('Milan', 'Milanovic', '123456789', '123456789');
 const laboratorija = new Laboratorija();
 
 pacijent.izabraniDoktor(doktor);
-doktor.zakazivanjePregleda(pacijent);
+doktor.zakazivanjePregleda(pacijent, tipPregleda.pritisak);
 laboratorija.merenje(pacijent, tipPregleda.pritisak);
-doktor.zakazivanjePregleda(pacijent);
+doktor.zakazivanjePregleda(pacijent, tipPregleda.secer);
 laboratorija.merenje(pacijent, tipPregleda.secer);

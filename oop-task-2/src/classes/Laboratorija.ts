@@ -6,7 +6,7 @@ export class Laboratorija {
   constructor() {}
 
   merenje(pacijent: Pacijent, tipPregleda: tipPregleda) {
-    if (!pacijent.zakazanPregled) {
+    if (Object.values(pacijent.pregled).every(value => !value)) {
       console.log('Pacijent nije zakazao pregled!');
       return;
     }
@@ -36,15 +36,15 @@ export class Laboratorija {
 
   merenjePritiska(pacijent: Pacijent) {
     console.log('Merenje pritiska izvršeno!');
-    pacijent.zakazanPregled = false;
+    pacijent.pregled.pritisak = false;
   }
 
   merenjeSecera(pacijent: Pacijent) {
     console.log('Merenje secera izvršeno!');
-    pacijent.zakazanPregled = false;
+    pacijent.pregled.secer = false;
   }
   merenjeHolesterola(pacijent: Pacijent) {
     console.log('Merenje holesterola izvršeno!');
-    pacijent.zakazanPregled = false;
+    pacijent.pregled.holesterol = false;
   }
 }

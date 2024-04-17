@@ -6,6 +6,7 @@ export class Pacijent {
   prezime: string;
   jmbg: string;
   brojKartona: string;
+  doktor: Doktor | null;
   pregled: Record<tipPregleda, boolean>; 
 
   constructor(ime: string, prezime: string, jmbg: string, brojKartona: string) {
@@ -13,6 +14,7 @@ export class Pacijent {
     this.prezime = prezime;
     this.jmbg = jmbg;
     this.brojKartona = brojKartona;
+    this.doktor = null;
     this.pregled = {
       pritisak: false,
       secer: false,
@@ -21,6 +23,7 @@ export class Pacijent {
   }
 
   izabraniDoktor(doktor: Doktor) {
+    this.doktor = doktor;
     console.log(`Pacijent ${this.ime} ${this.prezime} je izabrao doktora ${doktor.ime} ${doktor.prezime}`);
   }
 }
